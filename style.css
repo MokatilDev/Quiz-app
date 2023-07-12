@@ -27,7 +27,7 @@ body {
     min-height: 100vh;
 }
 
-#Start__Quiz{
+.Start__Quiz{
     font-weight: 400;
     background-color: var(--Bg-Button);
     padding: 12px 30px;
@@ -37,23 +37,23 @@ body {
     color: var(--Color-Button);
     cursor: pointer;
     transition: all 0.3s;
-    display: none;
 }
 
-#Start__Quiz:hover{
+.Start__Quiz:hover{
     background-color: var(--Color-Basic);
     color: var(--Color-Normal);
     border: 1px solid var(--Color-Basic);
 }
 
-main{
+.hide{
     background-color: var(--Bg-Button);
     max-width: 500px;
     border: 1px solid var(--Boder);
     border-radius: 7px;
     padding: 10px 30px;
-    height: 400px;
-    
+    min-height: 400px;
+    display: none;
+    transition: all 0.3s ;
 }
 
 #Question{
@@ -113,3 +113,20 @@ main{
     color: var(--Color-Normal);
     border: 1px solid var(--Color-Basic);
 }
+
+
+.Start__Quiz.active{
+    display: none;
+}
+
+.hide.active{
+    display: block;
+}
+
+.Anwsors1.correct{
+    background-color: var(--Color-Basic) ;
+    color: var(--Color-Normal);
+    border: 1px solid var(--Color-Basic);
+    display: flex;
+}
+
