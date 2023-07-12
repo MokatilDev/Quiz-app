@@ -43,6 +43,8 @@ const btnNext = document.querySelector(".Buttons button:last-child")
 const main = document.querySelector(".hide")
 
 
+
+
 let IndexOfQuestion = 0
 let Score = 0
 
@@ -51,7 +53,39 @@ function slesct(e){
         const correct = `✅`
         e.target.innerHTML += correct
         e.target.classList.add("correct")
+        
         e.target.setAttribute("disabled","")
+        Anwsors.forEach(element =>{
+            element.addEventListener("mousemove",()=>{
+                element.style.cssText = `
+                ackground-color: var(--Bg-Button);
+                color: var(--Color-Button);
+                border: 1px solid var(--Boder);
+                color: var(--Color-Button);
+                `
+            })
+            element.addEventListener("mouseleave",()=>{
+                element.style.cssText = `
+                background-color: var(--Bg-Button);
+                color: var(--Color-Button);
+                border: 1px solid var(--Boder);
+                color: var(--Color-Button);
+                `
+            })
+            element.style.cssText = `
+            background-color: var(--Bg-Button);
+            border: 1px solid var(--Boder);
+            color: var(--Color-Button);
+            `
+            element.style.cursor = "not-allowed"
+            element.setAttribute("disabled","")
+        })
+        e.target.style.cssText = `
+        background-color: var(--Color-Basic);
+        border: 1px solid var(--Color-Basic);
+        color: var(--Color-Normal);
+        `  
+        e.target.style.cursor = "not-allowed"
     }
 }
 
@@ -80,6 +114,29 @@ btnNext.addEventListener("click",()=>{
     }
     Anwsors.forEach(element =>{
         element.classList.remove("correct","incorrect")
+        element.style.cssText = `
+        background-color: var(--Bg-Button);
+        color: var(--Color-Button);
+        border: 1px solid var(--Boder);
+        color: var(--Color-Normal);
+        
+        `
+        element.removeAttribute("disabled")
+        element.addEventListener("mousemove",()=>{
+            element.style.cssText = `
+            background-color: var(--Color-Basic);
+            border: 1px solid var(--Color-Basic);
+            color: var(--Color-Normal);
+            `
+        })
+        element.addEventListener("mouseleave",()=>{
+            element.style.cssText = `
+            background-color: var(--Bg-Button);
+            color: var(--Color-Button);
+            border: 1px solid var(--Boder);
+            color: var(--Color-Normal);
+            `
+        })
     })
 })
 
@@ -89,3 +146,4 @@ Start__Quiz.addEventListener("click",()=>{
     Start__Quiz.classList.add("active")
     showQuestion()
 })
+

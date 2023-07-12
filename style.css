@@ -85,11 +85,7 @@ body {
     transition: all 0.3s;
 }
 
-.Anwsors button:hover{
-    background-color: var(--Color-Basic);
-    border: 1px solid var(--Color-Basic);
-    color: var(--Color-Normal);
-}
+
 
 .Buttons button{
     background-color: var(--Bg-Button);
