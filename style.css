@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins";
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    color: var(--Color-Normal);
+}
+
+:root{
+    --Color-main: rgb(15, 15, 15);
+    --Color-Normal: #fff;
+    --Color-Button: #7a7474;
+    --Bg-Button: #1C1C1C;
+    --Boder: #3E3E3E;
+    --Color-Basic: #7245FA;
+}
+body {
+    background-color: rgb(15, 15, 15);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+}
+
+#Start__Quiz{
+    font-weight: 400;
+    background-color: var(--Bg-Button);
+    padding: 12px 30px;
+    font-size: 2rem;
+    border: 1px solid var(--Boder);
+    border-radius: 7px;
+    color: var(--Color-Button);
+    cursor: pointer;
+    transition: all 0.3s;
+    display: none;
+}
+
+#Start__Quiz:hover{
+    background-color: var(--Color-Basic);
+    color: var(--Color-Normal);
+    border: 1px solid var(--Color-Basic);
+}
+
+main{
+    background-color: var(--Bg-Button);
+    max-width: 500px;
+    border: 1px solid var(--Boder);
+    border-radius: 7px;
+    padding: 10px 30px;
+    height: 400px;
+    
+}
+
+#Question{
+    font-size: 2rem;
+    padding-bottom: 10px;
+    border-bottom: var(--Boder) 1px solid;
+
+}
+
+.Anwsors{
+    margin-top: 20px;
+    border-bottom: 1px solid var(--Boder);
+    padding-bottom: 20px;
+}
+
+.Anwsors button{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--Bg-Button);
+    color: var(--Color-Button);
+    border: 1px solid var(--Boder);
+    width: 400px;
+    cursor: pointer;
+    padding: 8px 20px ;
+    color: var(--Color-Normal);
+    border-radius: 7px;
+    margin-top: 10px;
+    font-size: 1.2rem;
+    transition: all 0.3s;
+}
+
+.Anwsors button:hover{
+    background-color: var(--Color-Basic);
+    border: 1px solid var(--Color-Basic);
+    color: var(--Color-Normal);
+}
+
+.Buttons button{
+    background-color: var(--Bg-Button);
+    border: 1px solid var(--Boder);
+    color: var(--Color-Button);
+    border-radius: 7px;
+    font-size: 1.1rem;
+    padding: 8px 20px ;
+    cursor: pointer;
+}
+
+.Buttons{
+    padding-top: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.Buttons button:last-child{
+    background-color: var(--Color-Basic);
+    color: var(--Color-Normal);
+    border: 1px solid var(--Color-Basic);
+}
