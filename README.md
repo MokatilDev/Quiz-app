@@ -6,3 +6,5 @@
 ## Style Correct Anwsor
 ![image](https://github.com/MokatilDev/Quiz-app/assets/115933192/f7b48602-9ac0-4db8-9c8f-2f01850d3970)
 
+## Style inCorrect Anwsor
+![image](https://github.com/MokatilDev/Quiz-app/assets/115933192/2d42996b-182e-4cfe-b558-26a415385647)
