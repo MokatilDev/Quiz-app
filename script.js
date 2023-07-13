@@ -56,7 +56,50 @@ btnNext.setAttribute("disabled", "")
 let IndexOfQuestion = 0
 let Score = 0
 
+btnBack.addEventListener("click",() => {
+    
+    IndexOfQuestion = 0
+    Score = 0
+    Anwsors.forEach(element =>{
+        element.classList.remove("correct","incorrect")
+        element.style.cssText = ``
+    })
+    main.classList.remove("active")
+    Start__Quiz.classList.remove("active")
+    Anwsors.forEach(element => {
+        element.classList.remove("correct", "incorrect")
+        element.style.cssText = `
+        background-color: var(--Bg-Button);
+        color: var(--Color-Button);
+        border: 1px solid var(--Boder);
+        color: var(--Color-Normal);
+        
+        `
+        element.removeAttribute("disabled")
+        element.addEventListener("mousemove", () => {
+            element.style.cssText = `
+            background-color: var(--Boder-Basic);
+            border: 1px solid var(--Color-Basic);
+            color: var(--Color-Normal);
+            `
+        })
+        element.addEventListener("mouseleave", () => {
+            element.style.cssText = `
+            background-color: var(--Bg-Button);
+            color: var(--Color-Button);
+            border: 1px solid var(--Boder);
+            color: var(--Color-Normal);
+            `
+        })
+    })
+})
+
 function slesct(e) {
+    if(IndexOfQuestion == questionsArray.length - 1){
+        btnBack.style.opacity = "0%"
+        btnBack.setAttribute("disabled","")
+        btnBack.style.cursor = "default"
+    }
     btnNext.style.cursor = "pointer"
     btnNext.removeAttribute("disabled")
     if (e.target.dataset.correct == "true") {
@@ -138,7 +181,6 @@ function slesct(e) {
                    
                     `
                 element.textContent += ` ✔`
-                console.log(element);
             }
 
         })
@@ -211,8 +253,11 @@ btnNext.addEventListener("click", () => {
 
 })
 
-
 Start__Quiz.addEventListener("click", () => {
+    if(IndexOfQuestion == 0){
+        btnBack.textContent = "Quit quiz"
+    }
+
     main.classList.add("active")
     Start__Quiz.classList.add("active")
     showQuestion()
@@ -234,4 +279,6 @@ Start__Quiz.addEventListener("click", () => {
         })
     })
 })
+
+
 

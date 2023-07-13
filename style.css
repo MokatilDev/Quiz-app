@@ -26,9 +26,8 @@
 }
 body {
     background-color: rgb(15, 15, 15);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    place-items: center;
     width: 100%;
     min-height: 100vh;
 }
@@ -38,6 +37,7 @@ body {
     background-color: var(--Bg-Button);
     padding: 12px 30px;
     font-size: 2rem;
+    text-align: center;
     border: 1px solid var(--Boder);
     border-radius: 7px;
     color: var(--Color-Button);
@@ -102,6 +102,7 @@ body {
     font-size: 1.1rem;
     padding: 8px 20px ;
     cursor: pointer;
+    transition: All 0.3s;
 }
 
 .Buttons{
@@ -116,7 +117,11 @@ body {
     color: var(--Color-Normal);
     border: 1px solid var(--Color-Basic);
 }
-
+.Buttons button:first-child:hover{
+    background-color: var(--Bg-incorrect);
+    color: var(--Color-Normal);
+    border: 1px solid var(--Boder-incorrect);
+}
 
 .Start__Quiz.active{
     display: none;
@@ -164,4 +169,45 @@ body {
 .Score p {
     font-size: 1.6rem;
     text-align: center;
+}
+
+.Mokatil {
+    color: var(--Color-Normal);
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 0;
+}
+
+.Mokatil span {
+    color: var(--Color-Normal);
+    text-decoration: underline var(--Color-Basic);
+    transition: all 0.3s;
+    margin: 0;
+
+}
+
+.uil-twitter{
+    color: var(--Color-Button);
+    background-color: var(--Bg-Button);
+    padding: 5px 10px;
+    font-size: 1.2rem;
+    border-radius: 7px;
+    border: 1px solid var(--Boder);
+    cursor: pointer;
+    margin: 0;
+    transition: all 0.3s;
+}
+
+.uil-twitter:hover {
+    color: var(--Color-Normal);
+    margin: 0;
+    background-color: var(--Boder-Basic);
+    border: 1px solid var(--Color-Basic);
+}
+
+.CopyRight{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
 }
