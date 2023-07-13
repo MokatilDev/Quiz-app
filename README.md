@@ -8,3 +8,6 @@
 
 ## Style inCorrect Anwsor
 ![image](https://github.com/MokatilDev/Quiz-app/assets/115933192/2d42996b-182e-4cfe-b558-26a415385647)
+
+## Quit Quiz Button And Next Button
+![image](https://github.com/MokatilDev/Quiz-app/assets/115933192/1b2e7c67-2fac-4a68-a798-fa7a6a3a3c20)
