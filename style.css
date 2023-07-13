@@ -26,10 +26,13 @@
 }
 body {
     background-color: rgb(15, 15, 15);
-    display: grid;
-    place-items: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0px auto;
     width: 100%;
-    min-height: 100vh;
+    height: 100vh;
+    scroll-behavior: smooth;
 }
 
 .Start__Quiz{
@@ -210,4 +213,29 @@ body {
     align-items: center;
     justify-content: center;
     margin-top: 20px;
+}
+@media only screen and (max-width: 500px) {
+    body{
+        padding-inline: 20px;
+    }
+    .hide{
+        max-width: 400px;
+        min-height: 330px;
+        padding-block: 23px;
+    }
+    .Anwsors button{
+        width: 330px;
+    }
+    #Question{
+        font-size: 1.55rem;
+    }
+    .Score.active{
+        padding: 30px 20px;
+    }
+    .Score p {
+        font-size: 1.4rem;
+    }
+    .fa-chess-king{
+        font-size: 5rem;
+    }
 }
