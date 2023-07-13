@@ -11,3 +11,6 @@
 
 ## Quit Quiz Button And Next Button
 ![image](https://github.com/MokatilDev/Quiz-app/assets/115933192/1b2e7c67-2fac-4a68-a798-fa7a6a3a3c20)
+
+## Show your Score 
+![image](https://github.com/MokatilDev/Quiz-app/assets/115933192/d9a1e05f-7d6a-4059-8d18-f4ab31a5208c)
